@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<ul>
+  <li>
+    <h2>Menu</h2>
+  </li>
+  <ul>
+      <li *ngFor="let mapItem of listOfMenuItems | keyvalue">
+           {{mapItem.key}}:
+          <ul *ngFor="let menuItem of mapItem.value">
+              "id: "{{menuItem.id}} 
+              "Dish name: "{{menuItem.dishName}} 
+          </ul>
+      </li>
+  </ul>
+</ul>
+
